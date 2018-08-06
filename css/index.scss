@@ -1,0 +1,280 @@
+//字体颜色
+$fzcolor:#808080;
+
+// head
+.head{
+    text-align: center; 
+    .row{
+        >div{           
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            a{
+                color: $fzcolor;
+            }
+        }
+        >div:nth-child(1){
+            border-left: none;
+            position: relative;
+            img{
+                z-index: 100;
+                position: absolute;
+                left: 50px;
+                top: 30px;
+                // display: none;
+                opacity: 0;
+                transition: opacity 1s;
+                z-index: -1;
+            }
+            .img_dad:hover img{
+                opacity: 1;
+                z-index: 100;  
+                // display: block; 
+            }
+        }
+        .free-zc{
+            color: white;
+        }
+    }
+}
+
+// nav
+#wjs_nav{
+   nav{
+       margin-bottom: 0px; //消除和下面轮播图的间距
+   }
+   a{
+       height: 80px;
+       line-height: 80px;
+       padding-top: 0;
+       padding-bottom: 0;
+       &:hover,&:focus{
+        //    focus:获得焦点
+           border-bottom: 1px solid red;
+       }
+   }
+   .navbar-brand{
+       font-size: 70px;
+       padding-top: 5px;
+       .wjsfont-logo{
+           color: red;
+       }
+   }
+  
+}
+
+//slide
+.slide{
+   .carousel-inner{
+       img{
+           width: 100%;
+       }
+   } 
+}
+
+//exchange
+.exchange{
+    margin-top:40px;
+    margin-bottom:20px;
+    color: $fzcolor;
+    .row>div{
+        margin-bottom: 20px;
+    }
+    .wjsfont-e901{
+        font-size: 40px;
+        color: $fzcolor;
+    }
+    
+}
+
+// wjs-wait
+.wjs_wait{
+    // height: 77px;
+    // line-height: 76px; 
+    padding: 30px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    .pull-left{
+        a{
+            color: red;
+            border-bottom: 1px dashed red;
+        }
+    }
+    .pull-right{
+       a{color: black;} 
+    }
+}
+
+//wjs_buy
+.wjs_buy{
+    //灰色
+    .cart_defalut{
+        display: block;
+        padding-right: 80px;
+        position: relative;
+        box-shadow: 0 0 9px 5px #ccc;
+        background-color: #f7f7f7;
+        color: $fzcolor;
+        .cart_content{
+            border-right:1px dashed black; 
+            h4{
+                text-align: center; 
+                padding-top: 20px;
+            }
+            .pull-left{
+                padding-left: 5px;
+                width: 50%;
+                div{
+                    margin-bottom: 10px;
+                }
+            }
+            .pull-right{
+                padding-right: 5px;
+                width: 50%;
+                div{
+                    text-align: right;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .cart_rate{
+            width: 80px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: center;
+            padding-top: 50px;
+            &::before,{
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                box-shadow: 0 3px 0 0 #ccc;
+                background-color: #fff;
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -10px;
+                left: -10px;
+                box-shadow: 0 -3px 0 0 #ccc;
+                background-color: #fff;
+            }
+            .tips{
+                span:nth-child(1){
+                    border: 1px solid green;
+                    color: green;
+                    padding: 0 2px;
+                }
+                //为何是nth-of-type，而不是nth-child?，因为提示框是动态生成的，如果用nth-child，当第一个提示框出现的时候，“宝贝”之间会出现一个新的元素（提示框），这个时候，nth-child（2）就选不中“贝”，那么 其样式就不会生效
+                span:nth-of-type(2){
+                    border: 1px solid red;
+                    color: red;
+                    padding: 0 2px;
+                }
+            }
+        }       
+    }
+    //红色
+    .bgc-red{
+        background-color: red;
+        color: white;
+        .cart_content{
+            position: relative;
+            .wjsfont-e915{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 40px;
+            }
+        }
+    }
+    #buy_home{
+        .row>div{
+            margin-bottom: 35px;
+        }
+    }
+}
+
+// news
+.news{
+    .row{
+        .all_news{
+            font-size: 30px;
+            border-bottom: 1px solid black;
+            position: relative;
+            &::before{
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid black;
+                position: absolute;
+                bottom: -5px;
+                right: -9px;
+
+            }
+        }
+        .news_title{
+            position: relative;
+            .line{
+                width: 0px;
+                height: 380px;
+                border-left: 1px dashed black;
+                position: absolute;
+                top: 7px;
+                left: 74px;
+                z-index: -1;
+            }
+            ul{
+                list-style: none;
+                li{
+                    margin-bottom: 55px;
+                    a{
+                        background-color: #ccc;
+                        border-radius: 50%;
+                        display: inline-block;
+                        padding: 10px;
+                        span{
+                            font-size: 50px;
+                            color: white;
+                        }
+                        &:hover,&:focus{
+                            background-color: red;
+                        }
+                    } 
+                }
+                            
+            }
+        }
+        .news_content{}
+    }
+}
+
+//foot
+.foot{
+    h2{
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        li{
+            float: left;
+            margin-left: 30px;
+            font-size: 80px;
+        }
+    }
+}
+
+
